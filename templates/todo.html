@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1> Welcome to Todo list App </h1>
+<a href="/todo/list/" class="btn btn-primary" role="button">Home</a>
+<span>
+<a href="/todo/logout/" class="btn btn-danger" role="button">Logout</a>
+</span>
+<span>
+<a href="/todo/add/" class="btn btn-success" role="button">Add a task</a>
+</span>
+</br></br>
+
+<div>
+{% for todo in todos %}
+
+<p class="bg-success"><a href="">{{ todo.description }}</a></p>
+</div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Datepicker - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script>
+  $(function() {
+    $( "#id_task_date" ).datepicker();
+  });
+  </script>
+</head>
+<h1> Add a task </h1>
+<body>
+	<form action="" method="post">{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit" class="btn btn-default">Register</button>
+	</form>
+</body>
+{% endblock %}

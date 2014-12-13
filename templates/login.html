@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<body>
+    <div class="container">
+      <h2>Regiser||Todo</h2>
+      <form action="" method="post">{% csrf_token %}
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="username" class="form-control" id="id_username" placeholder="Enter Username">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="id_password" placeholder="Enter password">
+        </div>
+        <button type="submit" class="btn btn-default">LOGIN</button>
+        OR
+        <span> <a href="/todo/register/" class="btn btn-default" role="button">Register</a> </span>
+      </form>
+    </div>
+</body>
+{% endblock %}
